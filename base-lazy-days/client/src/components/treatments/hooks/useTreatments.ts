@@ -20,6 +20,6 @@ export function useTreatments(): Treatment[] {
 
 export function usePrefetchTreatments(): void {
   const queryClient = useQueryClient();
-  // they query key we set here has to be the same one for the 'useQuery' we want to prefetch the data on
+  // the query key we set here has to be the same one for the 'useQuery' we want to prefetch the data on
   queryClient.prefetchQuery(queryKeys.treatments, getTreatments);
 }
